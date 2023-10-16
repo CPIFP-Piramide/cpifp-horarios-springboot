@@ -1,0 +1,20 @@
+
+*{
+margin: 0px;
+padding: 0px;
+}
+
+table{
+width: 90%;
+margin: auto;
+}
+
+td{
+border: 1px solid black;
+padding: 2px;
+text-align: center;
+}
+
+.small{
+font-size: 0.8em;
+}
