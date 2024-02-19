@@ -18,6 +18,7 @@
     </tr>
     </thead>
     <tbody>
+    <h1 th:text="${aula}" style="text-align: center"></h1>
     <div th:each="bloque :${sesiones}">
         <tr th:if="${bloque[0].horaInicio}">
             <td>

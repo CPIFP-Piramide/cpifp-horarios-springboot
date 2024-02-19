@@ -28,12 +28,15 @@ public class SesionesUseCases {
                 int index = -1;
                 if(sesion.getDia().equals("Lunes")) index = 0;
                 else if(sesion.getDia().equals("Martes")) index = 1;
-                else if(sesion.getDia().equals("Miercoles")) index = 2;
+                else if(sesion.getDia().equals("Miércoles")) index = 2;
                 else if(sesion.getDia().equals("Jueves")) index = 3;
                 else if(sesion.getDia().equals("Viernes")) index = 4;
-                sesionesHorario.get(sesion.getSesion())[index] = sesion;
-            sesionesHorario.get(sesion.getSesion())[0].setHoraInicio(sesion.getHoraInicio());
-            sesionesHorario.get(sesion.getSesion())[0].setHoraFin(sesion.getHoraFin());
+                if(index != -1) {
+                    sesionesHorario.get(sesion.getSesion())[index] = sesion;
+                    sesionesHorario.get(sesion.getSesion())[0].setHoraInicio(sesion.getHoraInicio());
+                    sesionesHorario.get(sesion.getSesion())[0].setHoraFin(sesion.getHoraFin());
+                }
+
         }
         return sesionesHorario;
     }
